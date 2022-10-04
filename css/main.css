@@ -1,0 +1,134 @@
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  --font-Montserrat: 'Montserrat', sans-serif;
+  --font-Fraunces: 'Fraunces', serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 14px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Cream);
+  line-height: 1.2;
+  margin: 0;
+  padding: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  width: 600px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: var(--White);
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    flex-direction: column;
+    height: auto;
+    min-height: 450px;
+    width: auto;
+    max-width: 375px;
+  }
+}
+
+.wrapper .image,
+.wrapper .info {
+  width: 50%;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .wrapper .image,
+  .wrapper .info {
+    width: 100%;
+  }
+}
+
+.wrapper .image img {
+  max-width: 100%;
+}
+
+.wrapper .info {
+  padding: 3rem;
+}
+
+@media (max-width: 640px) {
+  .wrapper .info {
+    padding: 2rem;
+  }
+}
+
+.wrapper .info > span {
+  font-family: var(--font-Montserrat);
+  color: var(--Dark-grayish-blue);
+}
+
+.wrapper .info > h1 {
+  font-family: var(--font-Fraunces);
+  font-size: 3.4rem;
+}
+
+.wrapper .info > p {
+  font-family: var(--font-Montserrat);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--Very-dark-blue);
+}
+
+.wrapper .info > .price {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-Fraunces);
+}
+
+.wrapper .info > .price span {
+  display: inline-block;
+  font-size: 3rem;
+
+  color: var(--Dark-cyan);
+  margin-right: 1rem;
+}
+
+.wrapper .info > .price del {
+  font-family: var(--font-Montserrat);
+  color: var(--Dark-grayish-blue);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.wrapper .info > .btn {
+  margin-top: 2.4rem;
+
+  display: block;
+  width: 100%;
+  padding: 1.3rem 0;
+  text-align: center;
+  background-color: var(--Dark-cyan);
+  font-family: var(--font-Montserrat);
+  text-decoration: none;
+  color: var(--White);
+  border-radius: 10px;
+}
+
+.wrapper .info > .btn img {
+  margin-right: 1rem;
+}
